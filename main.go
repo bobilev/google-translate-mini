@@ -4,14 +4,16 @@ import (
 	"fmt"
 	"net/http"
 	"github.com/bobilev/google-translate-mini/handler"
+	"os"
+	"log"
 )
 
 func main() {
-	port := "3000"
-	//port := os.Getenv("PORT")
-	//if port == "" {
-	//	log.Fatal("$PORT must be set")
-	//}
+	//port := "3000"
+	port := os.Getenv("PORT")
+	if port == "" {
+		log.Fatal("$PORT must be set")
+	}
 
 
 	//err := dbwork.CreateAllTable()
