@@ -1,16 +1,18 @@
 #main {
+  margin-top: 70px;
   display: flex;
   justify-content: center;
 }
 #Editor {
   display: flex;
-
+  justify-content: center;
+  align-items: center;
 }
-.paperEditor {
+.paperEditor1,.paperEditor2 {
   position: relative;
   width: 450px;
   padding: 20px;
-  margin: 40px;
+  margin: 20px;
   outline: 1px solid #fff;
   word-wrap: break-word;
   span {
@@ -34,11 +36,33 @@
   pointer-events: none;
 }
 #SelectLanguage {
-  margin: 5px;
+  margin: 7px;
+  position: absolute;
+  top: 0;
+  .MuiInput-root-37:before {
+    display: none;
+  }
+}
+#btnSwap {
+  height: 30px!important;
+  width: 30px!important;
+}
+.paperEditor1 {
+  #SelectLanguage {
+    right: 12px;
+  }
+}
+.paperEditor2 {
+  #SelectLanguage {
+    left: 12px;
+  }
+}
+#btnTranslate {
+  margin: 7px;
   position: absolute;
   top: 0;
   right: 0;
-  .MuiInput-root-37:before {
-    display: none;
+  span {
+    outline: 0px solid #fff;
   }
 }

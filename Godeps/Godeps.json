@@ -24,6 +24,10 @@
 			"Rev": "a267b3d005e3a0f5886bf298bd27330332cb55a3"
 		},
 		{
+			"ImportPath": "github.com/bobilev/golang-chat-bot-vk",
+			"Rev": "bbcd756d46aad9d84d9fa8f388fec3e53ea7b6ab"
+		},
+		{
 			"ImportPath": "github.com/golang/protobuf/proto",
 			"Comment": "v1.1.0-18-g14aad3d",
 			"Rev": "14aad3d5ea4c323bcd7a2137e735da24a76e814c"
