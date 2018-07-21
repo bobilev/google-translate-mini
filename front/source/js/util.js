@@ -1,6 +1,6 @@
 'use strict'
 async function FecthApiPOST(apiMap) {
-  let request = `http://localhost/api`
+  let request = `http://localhost:3000/api`
   console.log("newfecthapi apiMap json", JSON.stringify(apiMap))
   return fetch(request,{
     method: "POST",
