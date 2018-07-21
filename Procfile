@@ -1,0 +1,1 @@
+web: google-translate-mini
