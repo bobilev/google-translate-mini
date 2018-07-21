@@ -7,13 +7,21 @@ import (
 	"fmt"
 	"golang.org/x/net/context"
 	"github.com/bobilev/google-translate-mini/types"
+	"google.golang.org/api/option"
+	"os"
 )
 
 func TranslateText(Original types.Original) types.Translate{
 	ctx := context.Background()
 
 	// Creates a client.
-	client, err := translate.NewClient(ctx)
+	//client, err := translate.NewClient(ctx)
+	apiKey := os.Getenv("GOOGLE_KEY_API")
+	if apiKey == "" {
+		log.Fatal("$apiKey must be set")
+	}
+	//const apiKey = "AIzaSyBV4HrmWqGssgG69W2_Ur160O_T2Jij_LM"
+	client, err := translate.NewClient(ctx, option.WithAPIKey(apiKey))
 	if err != nil {
 		log.Fatalf("Failed to create client: %v", err)
 	}

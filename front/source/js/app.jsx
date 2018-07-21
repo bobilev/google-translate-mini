@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Editor from './Editor/Editor.jsx'
-import { hot } from 'react-hot-loader'
+// import { hot } from 'react-hot-loader'
 
 class Main extends Component {
   render() {
