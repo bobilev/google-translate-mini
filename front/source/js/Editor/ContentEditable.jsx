@@ -39,6 +39,11 @@ export default class ContentEditable extends React.Component {
       )
   }
   componentDidMount() {
+    document.querySelector("span[contenteditable]").addEventListener("paste", function(e) {
+        e.preventDefault();
+        var text = e.clipboardData.getData("text/plain");
+        document.execCommand("insertHTML", false, text);
+    });
     document.execCommand("defaultParagraphSeparator", false, "p")
     if (this.textHTML.current.innerHTML === "<p><br></p>") {
       this.textHTML.current.focus()

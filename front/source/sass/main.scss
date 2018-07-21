@@ -6,7 +6,7 @@
 #Editor {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .paperEditor1,.paperEditor2 {
   position: relative;
@@ -46,6 +46,7 @@
 #btnSwap {
   height: 30px!important;
   width: 30px!important;
+  margin-top: 30px;
 }
 .paperEditor1 {
   #SelectLanguage {
