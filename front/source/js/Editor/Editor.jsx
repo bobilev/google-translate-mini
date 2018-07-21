@@ -86,7 +86,7 @@ class Editor extends React.Component {
           {SelectLanguage("Translate",Translate)}
           <Button
             id="btnTranslate"
-            size="smal"
+            size="small"
             variant="outlined"
             color="primary"
             onClick={this.onClickGoTranslate}
