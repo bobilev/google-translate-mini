@@ -6,16 +6,17 @@ import (
 	"fmt"
 	"strconv"
 )
-//var TextBuff,LastTextBuff *string = ""
 var TextBuff = new(string)
 var LastTextBuff = new(string)
 func SpyVk() {
 	accessToken := os.Getenv("ACCESSTOKENVK")
-	bot := vkchatbot.InitBot(accessToken)
-	bot.Log = 2 // 0,1,2 - уровни отображения логов
+	if accessToken != "" {
+		bot := vkchatbot.InitBot(accessToken)
+		bot.Log = 2 // 0,1,2 - уровни отображения логов
 
-	userid, _ := strconv.Atoi(os.Getenv("VKUSERID"))
-	res , _ := bot.SendMessage(userid,*TextBuff)
-	fmt.Println("[res]",res.MessageID)
+		userid, _ := strconv.Atoi(os.Getenv("VKUSERID"))
+		res , _ := bot.SendMessage(userid,*TextBuff)
+		fmt.Println("[res]",res.MessageID)
+	}
 
 }
